@@ -1,4 +1,5 @@
 const express = require('express');
+var port = process.env.PORT || 3000;
 const hbs = require('hbs');
 const fs = require('fs');
 var app = express();
@@ -52,6 +53,6 @@ app.get('/bad', (req, res) => {
         errorMessage: 'Unable to handle request'
     })
 })
-app.listen(3000, () => {
-    console.log("server is up");
+app.listen(port, () => {
+    console.log(`server is up ${port}`);
 });
