@@ -23,9 +23,9 @@ app.use((req, res, next) => {
 
     next();
 });
-app.use((req, res, next) => {
-    res.render('maintenance.hbs');
-})
+// app.use((req, res, next) => {
+//     res.render('maintenance.hbs');
+// })
 app.get('/', (request, response) => {
     // response.send({
     //     'name': 'Ashish yadav',
