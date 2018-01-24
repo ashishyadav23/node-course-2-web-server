@@ -42,6 +42,15 @@ app.get('/', (request, response) => {
         })
     });
 });
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        title: 'Project',
+        list: JSON.stringify([
+            "project1", "project2", "project3"
+        ])
+    })
+})
 app.get('/about', (reg, res) => {
     res.render('about.hbs', {
         title: 'About'
